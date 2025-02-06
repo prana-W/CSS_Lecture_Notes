@@ -1,28 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Selectors</title>
 
     <!-- The first div selector makes all the div tags red, but we only want the ones with class as "red". Therefore, we used .class_name (here red) to do that! -->
 
-    <!--   .something =>   here something is class    -->
-    <!--!   #something => here something is id -->
+    <!--!   .something =>   here something is class   -->
+    <!--!   #something =>   here something is id      -->
+
     <style>
-        
-       /* <!-- div {
+      /* <!-- div {
             background-color: red;
         } */
 
-        .red {
-            background-color: red;
-        }
+      /*Class selector*/
+      .red {
+        background-color: red;
+      }
+
+      /*Id selector*/
+      #green {
+        background-color: green;
+      }
+
+      /*Child selector - Only works on 'child_element' which is directly present inside the 'parent_element' */
+
+      div > p {
+        color: blue;
+        background-color: aquamarine;
+      }
+
+      /* Descendent Selector - Works even if the given element is not a direct child i.e the element should only be descendant*/
+
+      section p {
+        background-color: blueviolet;
+      }
+
+      /* Universal Selector - styles all the elements*/
+
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      /* Pseudo Selector */
+
+      /*Link that is visited once*/
+      a:visited {
+        background-color: yellow;
+      }
+
+      /*Link that is not visited till now*/
+      a:link {
+        background-color: pink;
+      }
+
+      /*When anything is clickedd*/
+      a:active {
+        background-color: red;
+      }
+
+      /*When mouse is hovered over*/
+      a:hover {
+        background-color: blue;
+      }
+
+      /*it means jaha jaha "pre* or any other tag in other case, apne parent ka pehela element hai!*/
+      pre:first-child {
+        background-color: darkblue;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="one">
+      <pre>I am first</pre>
+      <pre>I am second</pre>
+    </div>
+
     <div class="red">This is a div. I want red in it</div>
 
-    <div>This is another div. But I don't want red in it!</div>
-</body>
+    <div id="green">
+      This is another div. But I don't want red in it!
+      <p>I am a p inside div</p>
+    </div>
+
+    <section>
+      <article>
+        <p>
+          I am inside section -> article -> p. I am styled using "Desendant Tag"
+        </p>
+      </article>
+    </section>
+    <a href="https://www.youtube.com/watch?v=1cEG1T8beO4&t=578s"
+      >Lecture Link</a
+    >
+  </body>
 </html>
