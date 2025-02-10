@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts and Text Properties</title>
+    <!--Note: We can add custom fonts from google fonts -->
+    <style>
+       
+            @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+           
+        h1 {
+
+            /*This aligns the text*/
+
+            text-align: center;
+            
+
+    font-family: "Roboto Mono", serif;
+ 
+  
+        }
+        .temp3 {
+            /*Here the first font will be default, rest succedding fonts by commas are called fallback fonts, which gets applied from left to right if one is not avaliable!*/
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+            /*font-style for italique, normal, oblique etc*/
+            font-style: italic;
+
+            /*font-weight for bold*/
+            font-weight: 600;
+
+            /*For adding underline related styling*/
+            text-decoration: underline;
+
+            font-size: 25 px;
+
+            /*line-heihgt gives the space between two lines*/
+            line-height: 20px;
+
+            /*letter-spacing gives the space between each indivisula letters*/
+            letter-spacing: 8px;
+        }
+        h2 {
+
+
+            /*It capitalizes firrst letter of each word*/ 
+            text-transform: capitalize;
+            /*Other properies can be lowercase, uppercase etc*/
+
+            text-decoration: underline;
+            /*Chnages the colour of the decoration of the text*/
+            text-decoration-color: blue;
+
+            /*This changes the style of the text decoration*/
+            text-decoration-style: dashed;
+            /*Other properties like dotted, etc*/
+
+            /*This changes the thickness of the decoreation*/
+            text-decoration-thickness: 7px;
+
+            /*This adds the indent to the text*/
+            text-indent: 45px;
+
+    
+        }
+
+        .temp {
+            border: 2px solid red;
+            width: 30px;
+        
+            /*The below tells how to handle overflowed text - "ellipsis" simply give ... for overflowen text, while "clip" sustains the text*/
+            text-overflow: ellipsis;
+
+            /*The below tells what to do if overflowed - hide or scroll*/
+            overflow: hidden;
+        }
+
+        .temp2 {
+            border: 3px solid pink;
+            width: 90px;
+
+            /*This breaks the words that can't be adjusted into the same line*/
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>Fonts</h1>
+        <h2>about fonts</h2>
+        <p class="temp3">This is a lecture on fonts!</p>
+
+        <p class="temp">This is a temporary text for exlainign overflow</p>
+
+        <p class="temp2">I am a text, that breaks very easy. Maybe I am a kit-kat. Have a break, have a kit-kat
+        </p>
+    </div>
+    
+</body>
+</html>

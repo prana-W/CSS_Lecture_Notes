@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Properties</title>
+    <style>
+
+        h1 {
+            background-color: pink;
+        }
+
+        ol :nth-child(1) {
+            color: red;
+        }
+
+        ol :nth-child(2) {
+            color: #CD5C5C;
+        }
+
+        ol :nth-child(3) {
+            /*Each value can be from 0 to 255. Red, green, blue*/
+            color: rgb(200, 150, 75);
+        }
+
+        ol :nth-child(4) {
+
+            /*Here the fourth value is aplha which is from 0 to 1. It means opacity*/
+            color: rgba(220, 140, 254, 0.8);
+        }
+
+        ol :nth-child(5) {
+            /*In HSL, H => Hue, S=> Satuuration, L => Lightness*/
+            color: hsl(235, 25%, 46%);
+        }
+
+        ol :nth-child(6) {
+            /*Here, the fourth value is also alpha value (0-1)*/
+            color: hsl(25, 25%, 46%, 0.8);
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Let's learn about Colour</h1>
+
+    <p>
+        Color can be represented in: 
+        <ol>
+            <li>Color Keywords</li>
+            <li>Hex Color Code</li>
+            <li>RGB</li>
+            <li>RGBA</li>
+            <li>HSL</li>
+            <li>HSLA</li>
+        </ol>
+    </p>
+</body>
+</html>
