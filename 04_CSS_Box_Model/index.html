@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Model</title>
+    <!--* Content -> then padding -> then border -> then margin -->
+
+    <!--* Margin Collapse - When two element's margins are overlapping, then only the maximum margin will be set. -->
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .box {
+        background-color: aqua;
+      }
+
+      .box1 {
+        color: yellow;
+        padding: 10px;
+        margin: 25px;
+        border: 2px solid blue;
+        height: 150px; 
+        /*Above it makes the height of the content as 150px (excluding padding, border and margin)*/
+     
+        /*Total height/width of an element is height/width of the element along with padding, border and margin added*/
+      }
+ 
+      .box2 {
+        color: red;
+        padding: 10px;
+        margin: 25px;
+        border: 2px solid blue;
+        height: 150px;
+        box-sizing: border-box;
+        /*When we use the above styling, we are making the height/width of the entire element as the provided height (excluding margin). That is content+padding+border = 150px (in height). Margin is not included*/
+
+           /*Therefore, by default heighht/width is of the content/element (excluding padding, border, margin); but when we use box-sizing : border-box, we are saying that the height/width = (content+padding+border), excluding margin*/
+      }
+
+      /**/
+
+      .box3 {
+        color : pink;
+        padding: 10px;
+        margin: 30px;
+        border: 2px solid blue;
+        height: 150px;
+        box-sizing: border-box;
+
+      }
+    </style>
+  </head>
+  <body>
+    <!--! We can give more than once classes to an element by adding a space -->
+    <!--Note: Only multiple classes can be assigned to a single element. However, id will always be only one for a particlular element. No multiple id's can be given to a single element!! -->
+
+    <div class="box box1">I am box. I am also box1</div>
+    <div class="box box2">I am box. I am also box2</div>
+    <div class="box box3">I am box. I am also box3</div>
+  </body>
+</html>
