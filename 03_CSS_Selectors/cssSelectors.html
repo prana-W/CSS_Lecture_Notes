@@ -71,6 +71,11 @@
       pre:first-child {
         background-color: darkblue;
       }
+
+      /*Attribute selector*/
+      [data-x=a] {
+        color: chartreuse;
+      }
     </style>
   </head>
   <body>
@@ -96,5 +101,7 @@
     <a href="https://www.youtube.com/watch?v=1cEG1T8beO4&t=578s"
       >Lecture Link</a
     >
+
+    <p data-x="a">Yo, I am a p with attribute selector in css</p>
   </body>
 </html>

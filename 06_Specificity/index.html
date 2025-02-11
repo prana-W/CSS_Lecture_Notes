@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color : aqua; 
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .cred {
+            color: red;
+        }
+
+        .cpurple {
+            color: purple;
+        }
+
+
+          /* The specificity of this selector is 1(for element itself) + 10(for class selector) + 10(for another class selector) + 10(for attribute selector - here checks if href is present) + 10(for pseudo-class selector) = 41  */
+          a.harryclass.rohan-class[href]:hover {
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1 class="yellow cred cpurple" data-x="b"></h1>
+
+        <p>The specificity has a formula for each type of selctors used. The one with the highest specificity is applied. However, incase of ties, the one at the bottom wins over! </p>
+        <p>Incase of multiple selector once - like p.class_name, we add the specifficity for both.</p>
+
+        <a href="https://www.codewithharry.com/tutorial/css-specificity/">Specificty document</a>
+
+    </div> 
+    
+</body>
+</html>
